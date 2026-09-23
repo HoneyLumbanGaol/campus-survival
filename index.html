@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campus Survival | Minggu Mahasiswa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="doodle doodle-cloud cloud-a">☁️</div>
+    <div class="doodle doodle-cloud cloud-b">☁️</div>
+    <div class="doodle doodle-star star-a">✦</div>
+    <div class="doodle doodle-star star-b">✧</div>
+    <div class="doodle doodle-plant plant-a">🌿</div>
+    <div class="doodle doodle-book">📚</div>
+
+    <main class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-mark">🎒</div>
+          <div><p class="eyebrow">Misi bertahan hidup di kampus</p><h1>Campus <span>Survival</span></h1></div>
+        </div>
+        <button id="restartBtn" class="restart-btn" type="button" title="Mulai ulang">↻ <span>Ulangi</span></button>
+      </header>
+
+      <section class="intro-banner">
+        <div><p class="eyebrow">Semester baru, tantangan baru!</p><h2>Bisakah kamu menaklukkan<br /><em>7 hari tanpa tumbang?</em></h2><p>Atur waktumu dengan bijak. Kuliah, tugas, makan, tidur, dan organisasi semua ingin jatah waktumu!</p></div>
+        <div class="student-mascot" role="img" aria-label="Mahasiswa dengan laptop">🧑‍💻</div>
+        <div class="banner-sticker sticker-one">☕</div><div class="banner-sticker sticker-two">📝</div>
+      </section>
+
+      <section class="stats-panel" aria-label="Status mahasiswa">
+        <div class="day-status"><span class="mini-label">HARI</span><strong id="dayValue">1</strong><span>/ 7</span><div class="day-dots" id="dayDots"></div></div>
+        <div class="stat-item"><span class="stat-icon energy-icon">⚡</span><div><small>Energi</small><strong id="energyValue">78%</strong></div><div class="mini-meter"><i id="energyBar"></i></div></div>
+        <div class="stat-item"><span class="stat-icon academic-icon">📈</span><div><small>Akademik</small><strong id="academicValue">50</strong></div><div class="mini-meter"><i id="academicBar"></i></div></div>
+        <div class="stat-item"><span class="stat-icon free-icon">🎈</span><div><small>Waktu luang</small><strong id="freeValue">65%</strong></div><div class="mini-meter"><i id="freeBar"></i></div></div>
+        <div class="stat-item"><span class="stat-icon food-icon">🍱</span><div><small>Kenyang</small><strong id="hungerValue">80%</strong></div><div class="mini-meter"><i id="hungerBar"></i></div></div>
+      </section>
+
+      <section class="schedule-section">
+        <div class="section-heading"><div><p class="eyebrow">Jadwal hari ini</p><h2 id="dayTitle">Senin: Start yang cerah</h2></div><span class="slot-count" id="slotCount">0 / 3 slot</span></div>
+        <div class="schedule-card">
+          <div class="timeline"><div class="time-label">PAGI</div><div class="time-label">SIANG</div><div class="time-label">SORE</div></div>
+          <div class="chosen-list" id="chosenList"><div class="empty-slot">Pilih kegiatan untuk mengisi jadwalmu <span>↓</span></div></div>
+        </div>
+      </section>
+
+      <section class="activity-section">
+        <div class="section-heading compact"><div><p class="eyebrow">Apa yang mau kamu lakukan?</p><h2>Pilih satu kegiatan</h2></div><span class="hours-badge">⏱ 4 jam / kegiatan</span></div>
+        <div class="activity-grid" id="activityGrid"></div>
+        <div id="dayFeedback" class="day-feedback" hidden></div>
+        <button id="nextDayBtn" class="next-day-btn" type="button" hidden>Lanjut ke hari berikutnya <span>→</span></button>
+      </section>
+
+      <footer><strong>Campus Survival</strong><span>•</span><span>IPK penting, tapi kamu juga penting 💛</span></footer>
+    </main>
+
+    <div id="resultModal" class="modal" hidden>
+      <div class="result-card" role="dialog" aria-modal="true" aria-labelledby="resultTitle"><div class="result-emoji">🎓</div><p class="eyebrow">Minggu selesai!</p><h2 id="resultTitle">Kamu berhasil bertahan!</h2><p id="resultMessage"></p><div class="result-stats"><div><span>Akademik</span><strong id="finalAcademic">0</strong></div><div><span>Energi</span><strong id="finalEnergy">0%</strong></div><div><span>Luang</span><strong id="finalFree">0%</strong></div></div><div class="verdict" id="verdictText"></div><button id="playAgainBtn" class="next-day-btn" type="button">Main lagi <span>↻</span></button></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
